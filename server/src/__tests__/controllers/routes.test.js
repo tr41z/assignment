@@ -61,6 +61,7 @@ it("should send status code of 201 when superhero was created successfully", () 
 
     addSuperhero(validReq, res);
 
+    // Expect status 201 and correct message was sent
     expect(res.status).toHaveBeenCalledWith(201);
     expect(res.send).toHaveBeenCalledWith("Superhero added successfully!")
 })
