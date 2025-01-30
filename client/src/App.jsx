@@ -40,17 +40,23 @@ function App() {
       <nav>
         <button onClick={() => setIsOpened(true)}>Create new Hero!</button>
       </nav>
-      <div className='main-container'>
-        {isOpened && <AddHeroModal isOpened={isOpened} onClose={handleClose} onHeroAdded={fetchData} />}
+      <div className="main-container">
+        {isOpened && (
+          <AddHeroModal
+            isOpened={isOpened}
+            onClose={handleClose}
+            onHeroAdded={fetchData}
+          />
+        )}
         {!heroes.length ? (
-          <p>
-            No Heroes Available
-          </p>
-        ): heroes.map((hero) => (
-          <div key={hero.name}>
-            <HeroCard hero={hero}/>
-          </div>
-        ))}
+          <p>No Heroes Available</p>
+        ) : (
+          heroes.map((hero) => (
+            <div key={hero.name}>
+              <HeroCard hero={hero} />
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
