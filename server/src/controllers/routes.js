@@ -19,6 +19,7 @@ function addSuperhero(req, res) {
         return res.status(400).send("Request body is missing some fields!"); // Bad request if any field is missing
     }
 
+    // Validate humility score range
     if (humility_score > 10 || humility_score < 1) {
         return res.status(400).send("Humility Score must be a number between 1 and 10 inclusive!");
     }

@@ -6,7 +6,7 @@ const routes = require('./routes/Api.routes');
 const app = express();
 const port = 8080;
 
-// Use CORS
+// Use CORS to allow cross-origin requests
 app.use(cors());
 // Middleware to parse JSON bodies
 app.use(express.json());

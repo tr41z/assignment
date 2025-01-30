@@ -1,6 +1,7 @@
 import React from 'react'
 import { UserIcon } from 'lucide-react'
 
+// HeroCard component that takes a hero object as a prop
 const HeroCard = ({ hero }) => {
   return (
     <div className='hero-card'>
