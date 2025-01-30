@@ -18,3 +18,4 @@ If I had more time, I would:
 2. **Add More Features**: Implement additional features such as user authentication, database integration, more endpoints (DELETE, PUT) and a search functionality.
 3. **Write More Tests**: Increase test coverage by writing more unit tests, integration tests, and end-to-end tests to ensure the application is robust and reliable.
 4. **Explore New Technologies**: Experiment with new technologies and frameworks to improve the application and stay updated with the latest trends in software development.
+5. **Improve API Security**: Implement security best practices such as using HTTPS, validating inputs, using authentication and authorization mechanisms, and regularly updating dependencies to protect against vulnerabilities.
