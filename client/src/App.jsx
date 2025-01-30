@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import AddHeroModal from './components/AddHeroModal';
 import HeroCard from './components/HeroCard';
-import { URL } from './utils/const';
+import { API_URL } from './utils/const';
 
 function App() {
   const [isOpened, setIsOpened] = useState(false);
@@ -15,7 +15,7 @@ function App() {
 
   // Function to fetch superheroes data from the server
   const fetchData = async () => {
-    const res = await fetch(URL, {
+    const res = await fetch(API_URL, {
       method: 'GET',
     });
 

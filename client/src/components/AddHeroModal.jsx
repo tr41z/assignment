@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css'
-import { URL } from '../utils/const';
+import { API_URL } from '../utils/const';
 
 // Modal for adding new superhero
 const AddHeroModal = ({ isOpened, onClose, onHeroAdded }) => {
@@ -11,7 +11,7 @@ const AddHeroModal = ({ isOpened, onClose, onHeroAdded }) => {
 
   // Function to handle superhero form submission
   const onSubmit = async (name, superpower, humility_score) => {
-    const res = await fetch(URL, {
+    const res = await fetch(API_URL, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -52,7 +52,7 @@ const AddHeroModal = ({ isOpened, onClose, onHeroAdded }) => {
                           <label htmlFor="name">Name</label>
                           <input 
                             type='text' 
-                            placeholder='batman' 
+                            placeholder='superhero' 
                             value={name} 
                             onChange={(e) => setName(e.target.value)} 
                           />
