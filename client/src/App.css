@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+body, 
+html, 
+:root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #dad7cd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container {
+  display: flex;
+  height: 800px;
+  width: 1200px;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 10px;
+  z-index: 0;
+  margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav button {
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+nav button:hover {
+  transform: scale(1.05);
+}
+
+.hero-modal {
+  position: fixed;
+  z-index: 10; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; 
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1.0);
+  z-index: 9; 
+}
+
+.modal-content input {
+  width: 80%;
+  padding: 3px;
+  border-radius: 3px;
+  border: solid;
+  border-width: 1px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  font-weight: medium;
+  gap: 2px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  background: none;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 40px;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.submit-button:hover {
+  background-color: gray;
+}
+
+.hero-card {
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: solid;
+  background-color: lightcoral;
+  font-weight: bold;
 }

@@ -20,7 +20,7 @@ function addSuperhero(req, res) {
     }
 
     if (humility_score > 10 || humility_score < 1) {
-        return res.status(400).send("Humility Score must be a number between 1 and 10 inclusive!")
+        return res.status(400).send("Humility Score must be a number between 1 and 10 inclusive!");
     }
 
     // Create a new superhero object and add it to the array
@@ -28,7 +28,7 @@ function addSuperhero(req, res) {
     superheroes.push(data);
 
     // Send a response indicating the superhero was added
-    res.status(201).send("Superhero added!");
+    res.status(201).send("Superhero added successfully!");
 }
 
-module.exports = { addSuperhero, getSuperheroes }; 
+module.exports = { addSuperhero, getSuperheroes };
